@@ -1,0 +1,35 @@
+
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-title style="text-align: center;">Disclaimer</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+    <div style="background-image: url(../assets/back.jpg);   object-fit: cover;
+    background-size: cover; height: 100%;">
+    <ion-card style=" 
+      
+    background-color: #6905059e;margin-top: 0px;padding: 3px;"> 
+       
+      
+        <ion-card-content>
+            <p style="color: white;
+            font-size: 19px;
+            margin-top: 6px;">By selecting the Yes button below, you are voluntarily participating in this game. You are also aware and authorizing that data gathered from this app will be analyzed for research purposes to understand more about human processes with social media and news headlines. Please review your cellular data usage to manage any related fees related to this app.You nned to register your self each time you participate in this game </p>
+            <!-- <ion-button  size="small" (click)="exit()">Exit</ion-button>
+            <ion-button  size="small" (click)="next()">Next</ion-button> -->
+           
+        </ion-card-content>
+      </ion-card>
+</div>
+<ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button (click)="exit()">
+      No
+    </ion-fab-button>
+  </ion-fab>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="next()">
+        Yes
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

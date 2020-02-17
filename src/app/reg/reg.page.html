@@ -1,0 +1,173 @@
+<ion-content>
+  <div class="back" style="background-image: url(../assets/news_back.jpg);   object-fit: cover;
+  background-size: cover;">
+
+ 
+      <ion-card text-center style="top:15%;    background: #f5ebeb3b; " padding>
+          <ion-card-header ><p style="    color: #191717;
+            font-weight: bold;
+            /* text-decoration: double; */
+            /* text-decoration-color: brown; */
+            text-decoration: underline;
+            text-decoration-style: double;
+            text-decoration-color: brown;
+        ">Profile</p></ion-card-header>
+          <ion-card-content >
+            <ion-item>
+              <ion-label position="floating">User Name <span style="color:red;">*</span></ion-label>
+              <ion-input [(ngModel)]="username"></ion-input>
+            </ion-item>
+              
+  <ion-item>
+      <ion-label>Gender<span style="color:red;">*</span></ion-label>
+      <ion-select [(ngModel)]="Gender" placeholder="Select One">
+        <ion-select-option value="Female">Female</ion-select-option>
+        <ion-select-option value="Male">Male</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Profession<span style="color:red;">*</span></ion-label>
+      <ion-select [(ngModel)]="Qualifciaton" [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
+        <ion-select-option value="Student – pre-college"> Student – pre-college</ion-select-option>
+        <ion-select-option value="Student – undergraduate"> Student – undergraduate</ion-select-option>
+        <ion-select-option value="Student – graduate/doctorate">Student – graduate/doctorate</ion-select-option>
+        <ion-select-option  value="Working in Customer Service">Working in Customer Service</ion-select-option>
+        <ion-select-option value="Working in Technology"> Working in Technology</ion-select-option>
+        <ion-select-option value="Working in Medical or Healthcare">  Working in Medical or Healthcare</ion-select-option>
+        <ion-select-option value="Working in Retail, Sales, Marketing, Manufacturing"><p style="white-space: inherit;">Working in Retail, Sales, Marketing, Manufacturing</p></ion-select-option>
+        <ion-select-option value="Working in Education or Publishing">Working in Education or Publishing</ion-select-option>
+        <ion-select-option value="none">None of the above</ion-select-option>
+
+         
+       
+      </ion-select>
+    </ion-item>
+    <!-- <ion-item>
+        <ion-label>Values<span style="color:red;">*</span></ion-label>
+        <ion-select multiple="true" [(ngModel)]="Values"  placeholder="Select One">
+          <ion-select-option value="spc">
+              Importance of individual goals</ion-select-option>
+          <ion-select-option value="sug"> Importance of group goals</ion-select-option>
+          <ion-select-option value="sg">Hierarchical decision-making</ion-select-option>
+          <ion-select-option  value="wc">Collaborative decision-making</ion-select-option>
+          <ion-select-option value="wt"> Structured Rules</ion-select-option>
+          <ion-select-option value="wm">  Being flexible in situations
+
+            </ion-select-option>
+          <ion-select-option value="wr">Focus on task completion</ion-select-option>
+          <ion-select-option value="we">Place focus on long-term benefits</ion-select-option>
+          <ion-select-option value="none">	
+              Being quick in planning</ion-select-option>
+              <ion-select-option value="none">	
+                  Indirect communication</ion-select-option>
+                  <ion-select-option value="none">	
+                      Explicit communication</ion-select-option>
+
+                      <ion-select-option value="none">	
+                          Separate work and personal activities</ion-select-option>
+                          <ion-select-option value="none">	
+                              Blending of work life and personal life</ion-select-option>
+                              <ion-select-option value="none">	
+                                  Cultivate nurturing behaviors</ion-select-option>
+                                  <ion-select-option value="none">	
+                                      Seek achievement behaviors</ion-select-option>
+  
+           
+         
+        </ion-select>
+      </ion-item> -->
+    <ion-item>
+        <ion-label>Country<span style="color:red;">*</span></ion-label>
+        <ion-select placeholder="Select One" [(ngModel)]="location" >
+          <ion-select-option value="ar">Argentina</ion-select-option>
+          <ion-select-option value="au">Australia</ion-select-option>
+          <ion-select-option value="au">Austria</ion-select-option>
+          <ion-select-option value="be">Belgium</ion-select-option>
+          <ion-select-option value="br">Brazil</ion-select-option>
+          <ion-select-option value="bg">Bulgaria</ion-select-option>
+          <ion-select-option value="ca">Canada</ion-select-option>
+          <ion-select-option value="cn">China</ion-select-option>
+          <ion-select-option value="co">Colombia</ion-select-option>
+          <ion-select-option value="cu">Cuba</ion-select-option>
+          <ion-select-option value="cz">Czech Republic </ion-select-option>
+          <ion-select-option value="eg">Egypt</ion-select-option>
+          <ion-select-option value="fr">France</ion-select-option>
+          <ion-select-option value="de">Germany</ion-select-option>
+          <ion-select-option value="gr">Greece</ion-select-option>
+          <ion-select-option value="hk">Hong Kong</ion-select-option>
+          <ion-select-option value="hu">Hungary</ion-select-option>
+          <ion-select-option value="in">India</ion-select-option>
+          <ion-select-option value="id">Indonesia</ion-select-option>
+          <ion-select-option value="il">Israel</ion-select-option>
+          <ion-select-option value="it">Italy</ion-select-option>
+          <ion-select-option value="my">Malasiya</ion-select-option>
+          <ion-select-option value="mx">Mexico</ion-select-option>
+          <ion-select-option value="au">Morroco</ion-select-option>
+          <ion-select-option value="nl">Netharlands</ion-select-option>
+          <ion-select-option value="nz">New Zeland</ion-select-option>
+          <ion-select-option value="ng">Nigeria</ion-select-option>
+          <ion-select-option value="no">Norway</ion-select-option>
+          <ion-select-option value="ph">Philippines</ion-select-option>
+          <ion-select-option value="pl">Poland</ion-select-option>
+          <ion-select-option value="pt">Portugal</ion-select-option>
+          <ion-select-option value="ro">Romania</ion-select-option>
+          <ion-select-option value="ru">Russia</ion-select-option>
+          <ion-select-option value="sa">Saudi Arabia</ion-select-option>
+          <ion-select-option value="rs">Serbia</ion-select-option>
+          <ion-select-option value="sg">Singapore</ion-select-option>
+          <ion-select-option value="sk">Slovakia</ion-select-option>
+          <ion-select-option value="si">Slovenia</ion-select-option>
+          <ion-select-option value="za">South Africa</ion-select-option>
+          <ion-select-option value="kr">South Korea</ion-select-option>
+          <ion-select-option value="se">Sweden</ion-select-option>
+          <ion-select-option value="se">Switzerland</ion-select-option>
+          <ion-select-option value="tw">Taiwan</ion-select-option>
+          <ion-select-option value="th">Thailand</ion-select-option>
+          <ion-select-option value="tr">Turkey</ion-select-option>
+          <ion-select-option value="ae">UAE</ion-select-option>
+
+          <ion-select-option value="ua">Ukraine</ion-select-option> 
+          <ion-select-option value="gb">United Kingdom</ion-select-option>
+          <ion-select-option value="us">United States</ion-select-option>
+          <ion-select-option value="ve">Venezuela</ion-select-option>
+       
+
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Age Range<span style="color:red;">*</span></ion-label>
+        <ion-select [(ngModel)]="age" [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
+          <ion-select-option value="15-20"> 15-20</ion-select-option>
+          <ion-select-option value="21-25"> 21-25</ion-select-option>
+          <ion-select-option value="26-30">26-30</ion-select-option>
+          <ion-select-option  value="31-35">31-35</ion-select-option>
+          <ion-select-option value="36-40"> 36-40</ion-select-option>
+          <ion-select-option value="41-45">  41-45</ion-select-option>
+          <ion-select-option value="46-50">  46-50</ion-select-option>
+          <ion-select-option value="51 or Above">  51 Or Above</ion-select-option>
+         
+  
+           
+         
+        </ion-select>
+      </ion-item>
+              
+            
+            
+             
+             <div >
+             
+            
+                
+              <!-- <ion-button  (click)="go()" round padding>REGISTER</ion-button> -->
+              <ion-button  (click)="go()" expand="full">REGISTER</ion-button >
+
+            </div>
+         
+            </ion-card-content>  
+      
+        </ion-card>
+</div>
+</ion-content>

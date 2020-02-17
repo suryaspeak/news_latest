@@ -1,0 +1,207 @@
+<ion-header>
+    <ion-toolbar color="primary">
+  
+      <ion-title style="text-align: center;"  >
+        Phase 2
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div style="background-image: url(../assets/back.jpg);   object-fit: cover;
+    background-size: cover; height: 100%;">
+      
+        <div *ngIf="data" >
+         
+
+          
+          <ion-slides (ionSlideDrag)="shareornot()" (ionSlideDidChange)="slideChangedd(i)"   [options]="slideOpts"  *ngIf="data" pager="false"  (ionSlidesDidLoad)="load()"   (ionSlideNextEnd)="slideChange(index,article)" (ionSlideReachEnd)="slideend()" (ionSlidePrevStart)="slidepre(i)" (ionSlideDoubleTap)="tab()"	>
+          
+            <ion-slide  *ngFor="let item of static_article"  >
+                
+                <ion-card style=" height: 476px;
+                margin-top: 7%;
+                background-color: #8c221b9c;"> 
+                   
+                  
+                    <ion-card-content>
+                      <img style="width: 100%;
+                      height: 170px;
+                      object-fit: cover;
+                      /* border: 1px solid; */
+                      border: 5px solid white;
+                      padding: 2px;
+                  " src="{{item.urlToImage}}">
+                        <p style="color: white;
+                        font-size: 20px;
+                        margin-top: 24px;
+                        font-family: serif;
+                        line-height: 26px;
+                        margin-bottom: 10px;">{{item.title}}</p>
+                        <!-- <ion-button *ngIf="this.show==true" size="small" (click)="next()">Small</ion-button> -->
+                    </ion-card-content>
+                    <!-- <ion-button (click)="idget(item)">
+                      <ion-icon slot="icon-only" name="star"></ion-icon>
+                    </ion-button>
+                    <ion-button (click)="sharenext(item)">
+                      <ion-icon slot="icon-only" name="">Click</ion-icon>
+                    </ion-button> -->
+                    <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+                      <ion-fab-button (click)="sharenext(item)">
+                        <ion-icon name="ios-arrow-dropleft-circle"></ion-icon>
+                      </ion-fab-button>
+                    </ion-fab>
+                    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+                      <ion-fab-button (click)="idget(item)">
+                        <ion-icon name="ios-arrow-dropright-circle"></ion-icon>
+                      </ion-fab-button>
+                    </ion-fab>
+                  </ion-card>
+                 
+            </ion-slide>
+           
+          </ion-slides> 
+        
+       
+        </div>
+      
+<div *ngIf="!data">
+ 
+
+  <ion-list>
+   
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-avatar>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-avatar>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-avatar>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-avatar>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-avatar>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-avatar>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-avatar>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-avatar>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+</div>
+</div> 
+  </ion-content>
+  

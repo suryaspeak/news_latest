@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar  color="primary">
+    <ion-title>Values</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="background-image: url(../assets/back.jpg);   object-fit: cover;
+  background-size: cover; height: 100%;">
+ <ion-card style="    height: 322px;
+
+ background-color: #8c221b9c;margin-top: 0px;"> 
+ 
+ <ion-item>
+  <ion-label>Values<span style="color:white;">*</span></ion-label>
+  <ion-select multiple="true" [(ngModel)]="Values"  placeholder="Select One">
+  
+    <ion-select-option value="Importance of group goals"> Importance of group goals</ion-select-option>
+    <ion-select-option value="Hierarchical decision-making">Hierarchical decision-making</ion-select-option>
+    <ion-select-option  value="Collaborative decision-making">Collaborative decision-making</ion-select-option>
+    <ion-select-option value="Structured Rules"> Structured Rules</ion-select-option>
+    <ion-select-option value=" Being flexible in situations">  Being flexible in situations
+
+      </ion-select-option>
+    <ion-select-option value="Focus on task completion">Focus on task completion</ion-select-option>
+    <ion-select-option value="Place focus on long-term benefits">Place focus on long-term benefits</ion-select-option>
+    <ion-select-option value="Being quick in planning">	
+        Being quick in planning</ion-select-option>
+        <ion-select-option value="Indirect communication">	
+            Indirect communication</ion-select-option>
+            <ion-select-option value="Explicit communication">	
+                Explicit communication</ion-select-option>
+
+                <ion-select-option value="Separate work and personal activities">	
+                    Separate work and personal activities</ion-select-option>
+                    <ion-select-option value="Blending of work life and personal life">	
+                        Blending of work life and personal life</ion-select-option>
+                        <ion-select-option value="Cultivate nurturing behaviors">	
+                            Cultivate nurturing behaviors</ion-select-option>
+                            <ion-select-option value="Seek achievement behaviors">	
+                                Seek achievement behaviors</ion-select-option>
+
+     
+   
+  </ion-select>
+</ion-item> 
+<!-- <ion-item>
+  <ion-label>Others</ion-label>
+  <ion-textarea rows="4" cols="20" placeholder="Enter any notes here..."></ion-textarea>
+</ion-item> -->
+<p style="color: white;"> * please select the top  values that you agree are part of your identified culture </p>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="submit()">
+      Next
+  </ion-fab-button>
+</ion-fab>
+ </ion-card>
+
+    </div>
+</ion-content>

@@ -1,4 +1,33 @@
-.welcome-card img {
-  max-height: 35vh;
+.ion-activatable {
+  position: relative;
   overflow: hidden;
 }
+ion-avatar{
+  --border-radius:0px;
+}
+/* Custom Skeleton Line Height and Margin */
+.custom-skeleton ion-skeleton-text {
+  line-height: 13px;
+}
+
+.custom-skeleton ion-skeleton-text:last-child {
+  margin-bottom: 5px;
+}
+.rotateOutDownLeft {
+  // animation-name: rotateOutDownLeft;
+  animation: rotateOutDownLeft 2s;
+}
+@keyframes rotateOutDownLeft {
+  from {
+    transform-origin: left bottom;
+    opacity: 1;
+  }
+
+  to {
+    transform-origin: left bottom;
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+    display: none;
+  }
+}
+

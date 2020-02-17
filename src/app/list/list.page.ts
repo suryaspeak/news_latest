@@ -1,36 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-list',
   templateUrl: 'list.page.html',
   styleUrls: ['list.page.scss']
 })
 export class ListPage implements OnInit {
-  private selectedItem: any;
-  private icons = [
-    'flask',
-    'wifi',
-    'beer',
-    'football',
-    'basketball',
-    'paper-plane',
-    'american-football',
-    'boat',
-    'bluetooth',
-    'build'
-  ];
-  public items: Array<{ title: string; note: string; icon: string }> = [];
-  constructor() {
-    for (let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
-    }
+  content:any=[]
+  title:any;
+  urlToImage:any;
+  constructor(private route: ActivatedRoute) {
+    
   }
 
   ngOnInit() {
+    this.content=this.route.snapshot.paramMap.get("content");
+    this.title=this.route.snapshot.paramMap.get("title");
+    this.urlToImage=this.route.snapshot.paramMap.get("urlToImage");
+    console.log(this.content)
+    console.log(this.urlToImage)
   }
   // add back when alpha.4 is out
   // navigate(item) {

@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="text-align: center;">Feedback</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <!-- <p text-center style="color:brown">all the ratings (*) fields are mandatory</p> -->
+<div style="background-image: url(../assets/back.jpg);   object-fit: cover;
+background-size: cover; ">
+<ion-card  *ngFor="let item of fb;let i=index" class="tab" padding style="
+background: #8c221b9c; margin-top: 0px;">
+  
+      <h3 style="font-size: 15px;
+      font-family: serif;
+      color: white;">{{i+1}} : {{item.title}}</h3>
+      <p *ngIf="item.status == '4'"><ion-badge color="secondary">Share In Both Options</ion-badge></p>
+      <p *ngIf="item.status == '1'"><ion-badge color="secondary">Share With Out Image</ion-badge></p>
+      <p *ngIf="item.status == '2'"><ion-badge color="secondary">Share With Image</ion-badge></p>
+      <p *ngIf="item.status == '3'"><ion-badge color="secondary">Don't Share In Both Options</ion-badge></p>
+     
+      <ion-card>
+          <ion-item>
+              <ion-textarea  placeholder=" Pleace Enter a description" [(ngModel)]="item.answer" ></ion-textarea>
+               {{mag}}
+         </ion-item>
+      </ion-card>
+    
+        <ion-item>
+          <ion-label>Mark This As Fake News</ion-label>
+          <ion-toggle [(ngModel)]="item.check"></ion-toggle>
+        </ion-item>
+      
+  <ion-item>
+    <ion-label>Select value</ion-label>
+    <ion-select [(ngModel)]="item.values_ans"  placeholder="Select One" >
+      <ion-select-option *ngFor="let it of api_value;" value="{{it}}">{{it}}</ion-select-option>
+
+    </ion-select>
+  </ion-item>
+     
+        
+       
+         
+ 
+   
+</ion-card>
+<div text-center>
+  <!-- <button ion-button  round color="secondary" (click)="subhmit()">Submit</button>  -->
+  <ion-button expand="full" (click)="subhmit()">Submit</ion-button>
+</div>
+</div>
+
+     
+
+   
+
+</ion-content>
